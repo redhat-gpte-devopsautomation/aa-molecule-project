@@ -1,0 +1,5 @@
+---
+
+- import_playbook: mycollections.threetierapp.provision
+- import_playbook: mycollections.threetierapp.in_memory_inventory
+- import_playbook: mycollections.threetierapp.config

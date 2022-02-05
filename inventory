@@ -1,0 +1,16 @@
+[loadbalancers]
+
+
+[backend_servers]
+
+
+[database_servers]
+
+[osp_instances:children]
+loadbalancers
+backend_servers
+database_servers
+
+[all:vars]
+ansible_user=cloud-user
+ansible_ssh_private_key_file=~/.ssh/0e00key.pem

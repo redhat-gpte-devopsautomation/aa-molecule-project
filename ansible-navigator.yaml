@@ -1,0 +1,17 @@
+ansible-navigator:
+  ansible:
+    playbook: main.yml
+    inventories:
+      - inventory 
+  app: run  
+  execution-environment: 
+    pull-policy: missing  
+  mode: stdout 
+  logging:
+    append: False
+    level: critical
+    file: /tmp/threetierapp/ansible-navigator.log
+  playbook-artifact:
+    enable: True
+    replay: /tmp/threetierapp/artifact.json
+    save-as: /tmp/threetierapp/artifact.json
