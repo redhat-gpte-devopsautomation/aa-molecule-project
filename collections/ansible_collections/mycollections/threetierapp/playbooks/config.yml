@@ -21,6 +21,7 @@
 
 - name: Deploy database
   hosts: database_servers
+  become: yes
   roles:
     - name: Install and configure firewall
       role: mycollections.threetierapp.firewall
@@ -32,6 +33,7 @@
 
 - name: Deploy haproxy
   hosts: loadbalancers
+  become: yes
   roles:
     - name: Install and configure firewall
       role: mycollections.threetierapp.firewall
@@ -45,6 +47,7 @@
 
 - name: Deploy apache
   hosts: backend_servers
+  become: yes
   roles:
     - name: Install and configure firewall
       role: mycollections.threetierapp.firewall
